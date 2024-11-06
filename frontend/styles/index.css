@@ -1,0 +1,31 @@
+main{
+    height: 88.5vh;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+.main-text h1{
+    font-size: 4rem;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.425);
+    font-weight: 800;
+}
+.main-text p{
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    font-size: 1.7rem;
+}
+.main-text a button{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+.main-text a button p{
+    margin: auto;
+    font-size: 1.3rem;
+}
