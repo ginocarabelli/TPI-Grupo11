@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.AssemblyInfo.cs
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\Trabajos TUP\TPI-Grupo11\backend\EquiposAPI\ProduccionBack\obj\Debug\net8.0\ProduccionBack.sourcelink.json
