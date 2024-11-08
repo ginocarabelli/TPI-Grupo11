@@ -13,37 +13,45 @@ public partial class EquipoContext : DbContext
     {
     }
 
-    public virtual DbSet<Equipo> Equipos { get; set; }
+    public virtual DbSet<Equipos> Equipos { get; set; }
 
-    public virtual DbSet<Jugador> Jugadores { get; set; }
+    public virtual DbSet<Jugadores> Jugadores { get; set; }
 
-    public virtual DbSet<Persona> Personas { get; set; }
+    public virtual DbSet<JugadoresLog> JugadoresLogs { get; set; }
 
-    public virtual DbSet<Posicion> Posiciones { get; set; }
+    public virtual DbSet<Personas> Personas { get; set; }
+
+    public virtual DbSet<Posiciones> Posiciones { get; set; }
+
+    public virtual DbSet<Usuarios> Usuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Equipo>(entity =>
+        modelBuilder.Entity<Equipos>(entity =>
         {
-            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88A1D7E13C8");
+            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88A8B111083");
 
             entity.Property(e => e.IdEquipo)
                 .ValueGeneratedNever()
                 .HasColumnName("id_equipo");
             entity.Property(e => e.DirectorTecnico).HasColumnName("director_tecnico");
             entity.Property(e => e.NombreEquipo)
+                .IsRequired()
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .HasColumnName("nombre_equipo");
 
             entity.HasOne(d => d.DirectorTecnicoNavigation).WithMany(p => p.Equipos)
                 .HasForeignKey(d => d.DirectorTecnico)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_director_tecnico");
         });
 
-        modelBuilder.Entity<Jugador>(entity =>
+        modelBuilder.Entity<Jugadores>(entity =>
         {
-            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E2372530C0");
+            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E23233D7CC");
+
+            entity.ToTable(tb => tb.HasTrigger("TG_LOG_JUGADOR"));
 
             entity.Property(e => e.IdJugador)
                 .ValueGeneratedNever()
@@ -55,20 +63,52 @@ public partial class EquipoContext : DbContext
 
             entity.HasOne(d => d.IdEquipoNavigation).WithMany(p => p.Jugadores)
                 .HasForeignKey(d => d.IdEquipo)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_equipo");
 
             entity.HasOne(d => d.IdPersonaNavigation).WithMany(p => p.Jugadores)
                 .HasForeignKey(d => d.IdPersona)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_persona");
 
             entity.HasOne(d => d.IdPosicionNavigation).WithMany(p => p.Jugadores)
                 .HasForeignKey(d => d.IdPosicion)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_posicion");
         });
 
-        modelBuilder.Entity<Persona>(entity =>
+        modelBuilder.Entity<JugadoresLog>(entity =>
         {
-            entity.HasKey(e => e.IdPersona).HasName("PK__Personas__228148B00D87E45A");
+            entity.HasKey(e => e.IdJugadorLog).HasName("PK__Jugadore__C6528B9B03EFABC0");
+
+            entity.ToTable("JugadoresLog");
+
+            entity.Property(e => e.IdJugadorLog).HasColumnName("id_jugador_log");
+            entity.Property(e => e.FechaActualizacion).HasColumnName("fecha_actualizacion");
+            entity.Property(e => e.IdEquipo).HasColumnName("id_equipo");
+            entity.Property(e => e.IdJugador).HasColumnName("id_jugador");
+            entity.Property(e => e.IdPosicion).HasColumnName("id_posicion");
+            entity.Property(e => e.NroCamiseta).HasColumnName("nro_camiseta");
+
+            entity.HasOne(d => d.IdEquipoNavigation).WithMany(p => p.JugadoresLogs)
+                .HasForeignKey(d => d.IdEquipo)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_equipo_log");
+
+            entity.HasOne(d => d.IdJugadorNavigation).WithMany(p => p.JugadoresLogs)
+                .HasForeignKey(d => d.IdJugador)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_jugador_log");
+
+            entity.HasOne(d => d.IdPosicionNavigation).WithMany(p => p.JugadoresLogs)
+                .HasForeignKey(d => d.IdPosicion)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_posicion_log");
+        });
+
+        modelBuilder.Entity<Personas>(entity =>
+        {
+            entity.HasKey(e => e.IdPersona).HasName("PK__Personas__228148B08650D16E");
 
             entity.Property(e => e.IdPersona)
                 .ValueGeneratedNever()
@@ -76,20 +116,51 @@ public partial class EquipoContext : DbContext
             entity.Property(e => e.Dni).HasColumnName("dni");
             entity.Property(e => e.FechaNac).HasColumnName("fecha_nac");
             entity.Property(e => e.NombreCompleto)
+                .IsRequired()
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("nombre_completo");
         });
 
-        modelBuilder.Entity<Posicion>(entity =>
+        modelBuilder.Entity<Posiciones>(entity =>
         {
-            entity.HasKey(e => e.IdPosicion).HasName("PK__Posicion__2234F8105D576EBB");
+            entity.HasKey(e => e.IdPosicion).HasName("PK__Posicion__2234F8105CBA873D");
 
             entity.Property(e => e.IdPosicion).HasColumnName("id_posicion");
             entity.Property(e => e.Posicion)
+                .IsRequired()
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .HasColumnName("posicion");
+        });
+
+        modelBuilder.Entity<Usuarios>(entity =>
+        {
+            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuarios__4E3E04ADC805956B");
+
+            entity.Property(e => e.IdUsuario)
+                .ValueGeneratedNever()
+                .HasColumnName("id_usuario");
+            entity.Property(e => e.Contrasena)
+                .IsRequired()
+                .HasMaxLength(25)
+                .IsUnicode(false)
+                .HasColumnName("contrasena");
+            entity.Property(e => e.IdEquipo).HasColumnName("id_equipo");
+            entity.Property(e => e.Rol)
+                .IsRequired()
+                .HasMaxLength(15)
+                .IsUnicode(false)
+                .HasColumnName("rol");
+            entity.Property(e => e.Usuario)
+                .IsRequired()
+                .HasMaxLength(25)
+                .IsUnicode(false)
+                .HasColumnName("usuario");
+
+            entity.HasOne(d => d.IdEquipoNavigation).WithMany(p => p.Usuarios)
+                .HasForeignKey(d => d.IdEquipo)
+                .HasConstraintName("fk_equipo_favorito");
         });
 
         OnModelCreatingPartial(modelBuilder);

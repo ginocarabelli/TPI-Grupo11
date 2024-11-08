@@ -23,11 +23,19 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[JugadoresLog]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Personas]",
          "ObjectType": 0
       },
       {
          "Name": "[dbo].[Posiciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Usuarios]",
          "ObjectType": 0
       }
    ],
