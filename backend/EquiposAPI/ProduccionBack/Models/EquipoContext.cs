@@ -13,7 +13,7 @@ public partial class EquipoContext : DbContext
     {
     }
 
-    public virtual DbSet<EquipoS> Equipos { get; set; }
+    public virtual DbSet<Equipos> Equipos { get; set; }
 
     public virtual DbSet<EquiposLigasInfo> EquiposLigasInfos { get; set; }
 
@@ -33,7 +33,7 @@ public partial class EquipoContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<EquipoS>(entity =>
+        modelBuilder.Entity<Equipos>(entity =>
         {
             entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88AFC24A253");
 

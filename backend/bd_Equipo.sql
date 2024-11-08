@@ -84,11 +84,13 @@ CONSTRAINT fk_arbitro FOREIGN KEY (arbitro) REFERENCES Personas(id_persona)
 GO
 SET DATEFORMAT DMY
 GO
+INSERT INTO Ligas VALUES(1, 'Liga Argentina')
+
 INSERT INTO Personas VALUES(1, 'Guillermo Farré', 23843387, '16/03/1981')
 INSERT INTO Personas VALUES(2, 'Carlos Bianchi', 10225689, '26/04/1949')
 
-INSERT INTO Equipos VALUES(1, 'Club Atlético Belgrano', 1)
-INSERT INTO Equipos VALUES(2, 'Boca Juniors', 2)
+INSERT INTO Equipos VALUES(1, 'Club Atlético Belgrano', 1, 1)
+INSERT INTO Equipos VALUES(2, 'Boca Juniors', 2, 1)
 
 INSERT INTO Usuarios VALUES(1, 'minimega', '1234', 'Propietario', 1)
 INSERT INTO Usuarios VALUES(2, 'normaluser', '1234', 'Hinchada', 2)

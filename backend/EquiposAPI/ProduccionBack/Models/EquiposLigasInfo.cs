@@ -17,5 +17,5 @@ public partial class EquiposLigasInfo
 
     public decimal? Puntuacion { get; set; }
 
-    public virtual EquipoS IdEquipoNavigation { get; set; }
+    public virtual Equipos IdEquipoNavigation { get; set; }
 }

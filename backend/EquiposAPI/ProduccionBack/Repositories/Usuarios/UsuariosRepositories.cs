@@ -28,7 +28,7 @@ namespace ProduccionBack.Repositories.Usuarios
 
         public Models.Usuarios LogInUser(string username, string password)
         {
-            return _context.Usuarios.FirstOrDefault(x => x.Usuario == username && x.Contrasena == password);
+            return _context.Usuarios.Where(x => x.Usuario == username && x.Contrasena == password).FirstOrDefault();
         }
 
         public bool Save(Models.Usuarios usuario)

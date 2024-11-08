@@ -19,7 +19,7 @@ public partial class JugadoresLog
 
     public DateOnly FechaActualizacion { get; set; }
 
-    public virtual EquipoS IdEquipoNavigation { get; set; }
+    public virtual Equipos IdEquipoNavigation { get; set; }
 
     public virtual Jugadores IdJugadorNavigation { get; set; }
 

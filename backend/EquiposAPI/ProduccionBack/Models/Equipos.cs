@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ProduccionBack.Models;
 
-public partial class EquipoS
+public partial class Equipos
 {
     public int IdEquipo { get; set; }
 

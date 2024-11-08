@@ -25,7 +25,7 @@ public partial class Partidos
 
     public virtual Personas ArbitroNavigation { get; set; }
 
-    public virtual EquipoS IdLocalNavigation { get; set; }
+    public virtual Equipos IdLocalNavigation { get; set; }
 
-    public virtual EquipoS IdVisitanteNavigation { get; set; }
+    public virtual Equipos IdVisitanteNavigation { get; set; }
 }

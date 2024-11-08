@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
@@ -38,8 +39,8 @@ namespace ProduccionBack.Controllers
             {
                 return new
                 {
-                    succes = false,
-                    message = "No existe este usuario",
+                    success = false,
+                    message = "Las credenciales no coinciden o son incorrectas",
                     result = ""
                 };
             }
@@ -51,7 +52,8 @@ namespace ProduccionBack.Controllers
                 new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
                 new Claim("id", usuario.IdUsuario.ToString()),
-                new Claim("usuario", usuario.Usuario.ToString())
+                new Claim("usuario", usuario.Usuario.ToString()),
+                new Claim("rol", usuario.Rol.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key));
@@ -67,7 +69,7 @@ namespace ProduccionBack.Controllers
 
             return new
             {
-                succes = true,
+                success = true,
                 message = "exito",
                 result = new JwtSecurityTokenHandler().WriteToken(token)
             };

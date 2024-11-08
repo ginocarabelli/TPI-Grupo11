@@ -35,7 +35,7 @@
         <div class="container bg-dark">
             <h1 class="form-title text-light" style="font-weight: 900;">Iniciar Sesión</h1>
             <p class="form-paragraph text-light">Deberá ingresar su nombre de usuario y contraseña para ingresar al tablero principal de usuario</p>
-            <form class="form-box">
+            <form class="form-box" id="formLogin">
                 <div class="mb-3">
                     <label for="userFormControl" class="form-label text-light">Usuario</label>
                     <input type="text" class="form-control" id="userFormControl" placeholder="Nombre de usuario">
@@ -43,8 +43,8 @@
                 <div class="mb-3">
                     <label for="passwordFormControl" class="form-label text-light">Contraseña</label>
                     <input type="password" class="form-control" id="passwordFormControl" placeholder="Ingrese su Contraseña">
-                    
                 </div>
+                <p id="messageError" style="color: red"></p>
                 <div class="btn-container">
                     <button type="submit" class="btn btn-success">Iniciar Sesión</button>
                 </div>
@@ -54,6 +54,9 @@
     <footer>
         <p>Todos los derechos reservados © Grupo 11</p>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="./javascript/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

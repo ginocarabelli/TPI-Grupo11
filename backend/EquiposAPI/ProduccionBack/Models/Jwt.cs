@@ -10,6 +10,5 @@ namespace ProduccionBack.Models
         public string Audience { get; set; }
         public string Subject { get; set; }
 
-        
     }
 }
