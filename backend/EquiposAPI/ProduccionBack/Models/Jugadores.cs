@@ -17,7 +17,7 @@ public partial class Jugadores
 
     public int IdEquipo { get; set; }
 
-    public virtual Equipos IdEquipoNavigation { get; set; }
+    public virtual EquipoS IdEquipoNavigation { get; set; }
 
     public virtual Personas IdPersonaNavigation { get; set; }
 

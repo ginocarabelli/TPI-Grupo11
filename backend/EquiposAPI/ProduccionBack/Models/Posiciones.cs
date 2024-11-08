@@ -2,7 +2,6 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace ProduccionBack.Models;
 
@@ -13,6 +12,6 @@ public partial class Posiciones
     public string Posicion { get; set; }
 
     public virtual ICollection<Jugadores> Jugadores { get; set; } = new List<Jugadores>();
-    [JsonIgnore]
+
     public virtual ICollection<JugadoresLog> JugadoresLogs { get; set; } = new List<JugadoresLog>();
 }

@@ -14,11 +14,26 @@ id_posicion int identity primary key,
 posicion varchar(25) not null
 )
 GO
+CREATE TABLE Ligas(
+id_liga int primary key,
+liga varchar(50)
+)
+GO
 CREATE TABLE Equipos(
 id_equipo int primary key,
 nombre_equipo varchar(25) not null,
 director_tecnico int not null,
+id_liga int not null,
 CONSTRAINT fk_director_tecnico FOREIGN KEY (director_tecnico) REFERENCES Personas(id_persona),
+)
+GO
+CREATE TABLE EquiposLigasInfo(
+id_equipo_liga_info int identity primary key,
+id_equipo int not null,
+partidos_g smallint,
+partidos_p smallint,
+puntuacion decimal(5,2),
+CONSTRAINT fk_equipo_stats FOREIGN KEY (id_equipo) REFERENCES Equipos(id_equipo)
 )
 GO
 CREATE TABLE Jugadores(
@@ -52,6 +67,21 @@ rol varchar(15) not null,
 id_equipo int,
 CONSTRAINT fk_equipo_favorito FOREIGN KEY (id_equipo) REFERENCES Equipos(id_equipo)
 )
+GO
+CREATE TABLE Partidos(
+id_partido int identity primary key,
+id_local int not null,
+id_visitante int not null,
+fecha_partido date not null,
+hora_partido time not null,
+arbitro int not null,
+resultado_local int,
+resultado_visitante int,
+CONSTRAINT fk_equipo_local FOREIGN KEY (id_local) REFERENCES Equipos(id_equipo),
+CONSTRAINT fk_equipo_visitante FOREIGN KEY (id_visitante) REFERENCES Equipos(id_equipo),
+CONSTRAINT fk_arbitro FOREIGN KEY (arbitro) REFERENCES Personas(id_persona)
+)
+GO
 SET DATEFORMAT DMY
 GO
 INSERT INTO Personas VALUES(1, 'Guillermo Farré', 23843387, '16/03/1981')

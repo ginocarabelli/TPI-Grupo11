@@ -19,11 +19,23 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[EquiposLigasInfo]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Jugadores]",
          "ObjectType": 0
       },
       {
          "Name": "[dbo].[JugadoresLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Ligas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Partidos]",
          "ObjectType": 0
       },
       {

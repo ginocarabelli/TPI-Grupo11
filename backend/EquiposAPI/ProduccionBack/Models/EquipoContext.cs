@@ -13,11 +13,17 @@ public partial class EquipoContext : DbContext
     {
     }
 
-    public virtual DbSet<Equipos> Equipos { get; set; }
+    public virtual DbSet<EquipoS> Equipos { get; set; }
+
+    public virtual DbSet<EquiposLigasInfo> EquiposLigasInfos { get; set; }
 
     public virtual DbSet<Jugadores> Jugadores { get; set; }
 
     public virtual DbSet<JugadoresLog> JugadoresLogs { get; set; }
+
+    public virtual DbSet<Ligas> Ligas { get; set; }
+
+    public virtual DbSet<Partidos> Partidos { get; set; }
 
     public virtual DbSet<Personas> Personas { get; set; }
 
@@ -27,14 +33,15 @@ public partial class EquipoContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Equipos>(entity =>
+        modelBuilder.Entity<EquipoS>(entity =>
         {
-            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88A8B111083");
+            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88AFC24A253");
 
             entity.Property(e => e.IdEquipo)
                 .ValueGeneratedNever()
                 .HasColumnName("id_equipo");
             entity.Property(e => e.DirectorTecnico).HasColumnName("director_tecnico");
+            entity.Property(e => e.IdLiga).HasColumnName("id_liga");
             entity.Property(e => e.NombreEquipo)
                 .IsRequired()
                 .HasMaxLength(25)
@@ -47,11 +54,29 @@ public partial class EquipoContext : DbContext
                 .HasConstraintName("fk_director_tecnico");
         });
 
+        modelBuilder.Entity<EquiposLigasInfo>(entity =>
+        {
+            entity.HasKey(e => e.IdEquipoLigaInfo).HasName("PK__EquiposL__649DEDA2B3DBA7B1");
+
+            entity.ToTable("EquiposLigasInfo");
+
+            entity.Property(e => e.IdEquipoLigaInfo).HasColumnName("id_equipo_liga_info");
+            entity.Property(e => e.IdEquipo).HasColumnName("id_equipo");
+            entity.Property(e => e.PartidosG).HasColumnName("partidos_g");
+            entity.Property(e => e.PartidosP).HasColumnName("partidos_p");
+            entity.Property(e => e.Puntuacion)
+                .HasColumnType("decimal(5, 2)")
+                .HasColumnName("puntuacion");
+
+            entity.HasOne(d => d.IdEquipoNavigation).WithMany(p => p.EquiposLigasInfos)
+                .HasForeignKey(d => d.IdEquipo)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_equipo_stats");
+        });
+
         modelBuilder.Entity<Jugadores>(entity =>
         {
-            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E23233D7CC");
-
-            entity.ToTable(tb => tb.HasTrigger("TG_LOG_JUGADOR"));
+            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E22D20E748");
 
             entity.Property(e => e.IdJugador)
                 .ValueGeneratedNever()
@@ -79,7 +104,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<JugadoresLog>(entity =>
         {
-            entity.HasKey(e => e.IdJugadorLog).HasName("PK__Jugadore__C6528B9B03EFABC0");
+            entity.HasKey(e => e.IdJugadorLog).HasName("PK__Jugadore__C6528B9BE37E898C");
 
             entity.ToTable("JugadoresLog");
 
@@ -104,6 +129,48 @@ public partial class EquipoContext : DbContext
                 .HasForeignKey(d => d.IdPosicion)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_posicion_log");
+        });
+
+        modelBuilder.Entity<Ligas>(entity =>
+        {
+            entity.HasKey(e => e.IdLiga).HasName("PK__Ligas__99842D796D587C5D");
+
+            entity.Property(e => e.IdLiga)
+                .ValueGeneratedNever()
+                .HasColumnName("id_liga");
+            entity.Property(e => e.Liga)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("liga");
+        });
+
+        modelBuilder.Entity<Partidos>(entity =>
+        {
+            entity.HasKey(e => e.IdPartido).HasName("PK__Partidos__42D83E445BA04C4D");
+
+            entity.Property(e => e.IdPartido).HasColumnName("id_partido");
+            entity.Property(e => e.Arbitro).HasColumnName("arbitro");
+            entity.Property(e => e.FechaPartido).HasColumnName("fecha_partido");
+            entity.Property(e => e.HoraPartido).HasColumnName("hora_partido");
+            entity.Property(e => e.IdLocal).HasColumnName("id_local");
+            entity.Property(e => e.IdVisitante).HasColumnName("id_visitante");
+            entity.Property(e => e.ResultadoLocal).HasColumnName("resultado_local");
+            entity.Property(e => e.ResultadoVisitante).HasColumnName("resultado_visitante");
+
+            entity.HasOne(d => d.ArbitroNavigation).WithMany(p => p.Partidos)
+                .HasForeignKey(d => d.Arbitro)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_arbitro");
+
+            entity.HasOne(d => d.IdLocalNavigation).WithMany(p => p.PartidoIdLocalNavigations)
+                .HasForeignKey(d => d.IdLocal)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_equipo_local");
+
+            entity.HasOne(d => d.IdVisitanteNavigation).WithMany(p => p.PartidoIdVisitanteNavigations)
+                .HasForeignKey(d => d.IdVisitante)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_equipo_visitante");
         });
 
         modelBuilder.Entity<Personas>(entity =>
@@ -136,7 +203,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Usuarios>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuarios__4E3E04ADC805956B");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuarios__4E3E04AD9B35AF85");
 
             entity.Property(e => e.IdUsuario)
                 .ValueGeneratedNever()
