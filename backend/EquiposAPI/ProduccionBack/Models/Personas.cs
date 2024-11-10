@@ -15,6 +15,8 @@ public partial class Personas
 
     public DateOnly FechaNac { get; set; }
 
+    public bool Alta { get; set; }
+
     public virtual ICollection<Equipos> Equipos { get; set; } = new List<Equipos>();
 
     public virtual ICollection<Jugadores> Jugadores { get; set; } = new List<Jugadores>();

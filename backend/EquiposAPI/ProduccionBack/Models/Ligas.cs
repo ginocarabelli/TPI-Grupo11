@@ -9,5 +9,7 @@ public partial class Ligas
 {
     public int IdLiga { get; set; }
 
-    public string Liga { get; set; }
+    public string Liga1 { get; set; }
+
+    public bool Alta { get; set; }
 }

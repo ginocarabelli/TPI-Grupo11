@@ -1,3 +1,7 @@
+body{
+    background-image: url('../assets/wallpaper.jpg');
+}
+
 main{
     height: 88.5vh;
     margin: auto;

@@ -35,11 +35,12 @@ public partial class EquipoContext : DbContext
     {
         modelBuilder.Entity<Equipos>(entity =>
         {
-            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88AFC24A253");
+            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88ADD6BC5E7");
 
             entity.Property(e => e.IdEquipo)
                 .ValueGeneratedNever()
                 .HasColumnName("id_equipo");
+            entity.Property(e => e.Alta).HasColumnName("alta");
             entity.Property(e => e.DirectorTecnico).HasColumnName("director_tecnico");
             entity.Property(e => e.IdLiga).HasColumnName("id_liga");
             entity.Property(e => e.NombreEquipo)
@@ -56,11 +57,12 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<EquiposLigasInfo>(entity =>
         {
-            entity.HasKey(e => e.IdEquipoLigaInfo).HasName("PK__EquiposL__649DEDA2B3DBA7B1");
+            entity.HasKey(e => e.IdEquipoLigaInfo).HasName("PK__EquiposL__649DEDA249D19B31");
 
             entity.ToTable("EquiposLigasInfo");
 
             entity.Property(e => e.IdEquipoLigaInfo).HasColumnName("id_equipo_liga_info");
+            entity.Property(e => e.Alta).HasColumnName("alta");
             entity.Property(e => e.IdEquipo).HasColumnName("id_equipo");
             entity.Property(e => e.PartidosG).HasColumnName("partidos_g");
             entity.Property(e => e.PartidosP).HasColumnName("partidos_p");
@@ -76,11 +78,14 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Jugadores>(entity =>
         {
-            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E22D20E748");
+            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E2EA7E9168");
+
+            entity.ToTable(tb => tb.HasTrigger("TG_LOG_JUGADOR"));
 
             entity.Property(e => e.IdJugador)
                 .ValueGeneratedNever()
                 .HasColumnName("id_jugador");
+            entity.Property(e => e.Alta).HasColumnName("alta");
             entity.Property(e => e.IdEquipo).HasColumnName("id_equipo");
             entity.Property(e => e.IdPersona).HasColumnName("id_persona");
             entity.Property(e => e.IdPosicion).HasColumnName("id_posicion");
@@ -104,7 +109,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<JugadoresLog>(entity =>
         {
-            entity.HasKey(e => e.IdJugadorLog).HasName("PK__Jugadore__C6528B9BE37E898C");
+            entity.HasKey(e => e.IdJugadorLog).HasName("PK__Jugadore__C6528B9BCE1A2F60");
 
             entity.ToTable("JugadoresLog");
 
@@ -133,12 +138,13 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Ligas>(entity =>
         {
-            entity.HasKey(e => e.IdLiga).HasName("PK__Ligas__99842D796D587C5D");
+            entity.HasKey(e => e.IdLiga).HasName("PK__Ligas__99842D79C8B87889");
 
             entity.Property(e => e.IdLiga)
                 .ValueGeneratedNever()
                 .HasColumnName("id_liga");
-            entity.Property(e => e.Liga)
+            entity.Property(e => e.Alta).HasColumnName("alta");
+            entity.Property(e => e.Liga1)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("liga");
@@ -146,7 +152,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Partidos>(entity =>
         {
-            entity.HasKey(e => e.IdPartido).HasName("PK__Partidos__42D83E445BA04C4D");
+            entity.HasKey(e => e.IdPartido).HasName("PK__Partidos__42D83E446C02172F");
 
             entity.Property(e => e.IdPartido).HasColumnName("id_partido");
             entity.Property(e => e.Arbitro).HasColumnName("arbitro");
@@ -175,11 +181,12 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Personas>(entity =>
         {
-            entity.HasKey(e => e.IdPersona).HasName("PK__Personas__228148B08650D16E");
+            entity.HasKey(e => e.IdPersona).HasName("PK__Personas__228148B0476D7428");
 
             entity.Property(e => e.IdPersona)
                 .ValueGeneratedNever()
                 .HasColumnName("id_persona");
+            entity.Property(e => e.Alta).HasColumnName("alta");
             entity.Property(e => e.Dni).HasColumnName("dni");
             entity.Property(e => e.FechaNac).HasColumnName("fecha_nac");
             entity.Property(e => e.NombreCompleto)
@@ -191,7 +198,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Posiciones>(entity =>
         {
-            entity.HasKey(e => e.IdPosicion).HasName("PK__Posicion__2234F8105CBA873D");
+            entity.HasKey(e => e.IdPosicion).HasName("PK__Posicion__2234F8103C67333B");
 
             entity.Property(e => e.IdPosicion).HasColumnName("id_posicion");
             entity.Property(e => e.Posicion)
@@ -203,7 +210,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Usuarios>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuarios__4E3E04AD9B35AF85");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuarios__4E3E04AD8581D9A5");
 
             entity.Property(e => e.IdUsuario)
                 .ValueGeneratedNever()

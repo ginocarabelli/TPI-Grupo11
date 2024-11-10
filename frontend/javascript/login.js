@@ -22,6 +22,10 @@ async function fetchLogin(username, password) {
                 const decodedToken = jwt_decode(data.result);
                 if(decodedToken.rol === 'Propietario'){
                     window.location.href = 'dashboard.html'
+                    console.log(decodedToken.id)
+                }
+                else if(decodedToken.rol === 'Hinchada'){
+                    window.location.href = 'dashboard.html'
                 }
                 else{
                     window.location.href = 'index.html'

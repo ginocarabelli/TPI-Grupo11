@@ -1,31 +1,47 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace ProduccionBack.Repositories.Equipos
 {
     public class EquiposRepository : IEquiposRepository
     {
+
+        private readonly Models.EquipoContext _context;
+        public EquiposRepository(Models.EquipoContext context)
+        {
+            _context = context;
+        }
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            Models.Equipos e = _context.Equipos.Find(id);
+            if (e != null)
+            {
+                e.Alta = false;
+            }
+            return _context.SaveChanges() > 0;
         }
 
         public List<Models.Equipos> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Equipos.Where(e => e.Alta).ToList();
         }
 
         public Models.Equipos GetById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Equipos.Where(e => e.IdEquipo == id && e.Alta).ToList().FirstOrDefault();
         }
 
         public bool Save(Models.Equipos equipo)
         {
-            throw new NotImplementedException();
+            _context.Equipos.Add(equipo);
+            return _context.SaveChanges() > 0;
         }
 
         public bool Update(int id, Models.Equipos equipo)
         {
-            throw new NotImplementedException();
+            Models.Equipos e = _context.Equipos.Find(equipo.IdEquipo);
+            e = equipo;
+            return _context.SaveChanges() > 0;
         }
     }
 }

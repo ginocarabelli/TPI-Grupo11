@@ -3,29 +3,46 @@ namespace ProduccionBack.Repositories.Jugadores
 {
     public class JugadoresRepository : IJugadoresRepository
     {
+        private readonly Models.EquipoContext _context;
+
+        public JugadoresRepository(Models.EquipoContext context) {
+            _context = context;
+        }
+
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            Models.Jugadores? j = _context.Jugadores.Find(id);
+            if (j != null)
+            {
+                j.Alta = false;
+            }
+            return _context.SaveChanges() > 0;
         }
 
         public List<Models.Jugadores> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Jugadores.Where(j => j.Alta).ToList();
         }
 
         public Models.Jugadores GetById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Jugadores.Where(j => j.Alta && j.IdJugador == id).ToList().FirstOrDefault();
         }
 
         public bool Save(Models.Jugadores jugadores)
         {
-            throw new NotImplementedException();
+            _context.Jugadores.Add(jugadores);
+            return _context.SaveChanges() > 0;
         }
 
-        public bool Update(int id, Models.Jugadores jugadores)
+        public bool Update(int id, Models.Jugadores jugador)
         {
-            throw new NotImplementedException();
+            Models.Jugadores j = _context.Jugadores.Find(jugador.IdJugador);
+            if (j != null)
+            {
+                j = jugador;
+            }
+            return _context.SaveChanges() > 0;
         }
     }
 }

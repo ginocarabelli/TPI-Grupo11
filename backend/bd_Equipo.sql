@@ -1,12 +1,14 @@
-CREATE DATABASE db_Equipos
+CREATE DATABASE Equipos
 GO
-USE db_Equipos
+USE Equipos
+
 GO
 CREATE TABLE Personas(
 id_persona int primary key,
 nombre_completo varchar(50) not null,
 dni int not null,
-fecha_nac date not null
+fecha_nac date not null,
+alta bit NOT NULL
 )
 GO
 CREATE TABLE Posiciones(
@@ -16,7 +18,8 @@ posicion varchar(25) not null
 GO
 CREATE TABLE Ligas(
 id_liga int primary key,
-liga varchar(50)
+liga varchar(50),
+alta bit NOT NULL
 )
 GO
 CREATE TABLE Equipos(
@@ -24,6 +27,7 @@ id_equipo int primary key,
 nombre_equipo varchar(25) not null,
 director_tecnico int not null,
 id_liga int not null,
+alta bit NOT NULL,
 CONSTRAINT fk_director_tecnico FOREIGN KEY (director_tecnico) REFERENCES Personas(id_persona),
 )
 GO
@@ -33,6 +37,7 @@ id_equipo int not null,
 partidos_g smallint,
 partidos_p smallint,
 puntuacion decimal(5,2),
+alta bit not null,
 CONSTRAINT fk_equipo_stats FOREIGN KEY (id_equipo) REFERENCES Equipos(id_equipo)
 )
 GO
@@ -42,6 +47,7 @@ id_persona int not null,
 nro_camiseta smallint not null,
 id_posicion int not null,
 id_equipo int not null,
+alta bit not null,
 CONSTRAINT fk_persona FOREIGN KEY (id_persona) REFERENCES Personas(id_persona),
 CONSTRAINT fk_posicion FOREIGN KEY (id_posicion) REFERENCES Posiciones(id_posicion),
 CONSTRAINT fk_equipo FOREIGN KEY (id_equipo) REFERENCES Equipos(id_equipo),
@@ -84,13 +90,13 @@ CONSTRAINT fk_arbitro FOREIGN KEY (arbitro) REFERENCES Personas(id_persona)
 GO
 SET DATEFORMAT DMY
 GO
-INSERT INTO Ligas VALUES(1, 'Liga Argentina')
+INSERT INTO Ligas VALUES(1, 'Liga Argentina', 1)
 
-INSERT INTO Personas VALUES(1, 'Guillermo Farré', 23843387, '16/03/1981')
-INSERT INTO Personas VALUES(2, 'Carlos Bianchi', 10225689, '26/04/1949')
+INSERT INTO Personas VALUES(1, 'Guillermo Farrï¿½', 23843387, '16/03/1981', 1)
+INSERT INTO Personas VALUES(2, 'Carlos Bianchi', 10225689, '26/04/1949', 1)
 
-INSERT INTO Equipos VALUES(1, 'Club Atlético Belgrano', 1, 1)
-INSERT INTO Equipos VALUES(2, 'Boca Juniors', 2, 1)
+INSERT INTO Equipos VALUES(1, 'Club Atlï¿½tico Belgrano', 1, 1, 1)
+INSERT INTO Equipos VALUES(2, 'Boca Juniors', 2, 1, 1)
 
 INSERT INTO Usuarios VALUES(1, 'minimega', '1234', 'Propietario', 1)
 INSERT INTO Usuarios VALUES(2, 'normaluser', '1234', 'Hinchada', 2)
@@ -98,7 +104,7 @@ GO
 CREATE PROC SP_INSERTAR_PERSONA
 @id_persona int, @nombre_completo varchar(50), @dni bigint, @fecha_nac date
 AS
-	INSERT INTO Personas VALUES(@id_persona, @nombre_completo, @dni, @fecha_nac)
+	INSERT INTO Personas VALUES(@id_persona, @nombre_completo, @dni, @fecha_nac, 1)
 GO
 CREATE PROC SP_INSERTAR_POSICION
 @posicion varchar(25)
@@ -108,12 +114,12 @@ GO
 CREATE PROC SP_INSERTAR_EQUIPO
 @id_equipo int, @nombre_equipo varchar(25), @director_tecnico int
 AS
-	INSERT INTO Equipos VALUES(@id_equipo, @nombre_equipo, @director_tecnico)
+	INSERT INTO Equipos(id_equipo, nombre_equipo, director_tecnico, alta) VALUES(@id_equipo, @nombre_equipo, @director_tecnico, 1)
 GO
 CREATE PROC SP_INSERTAR_JUGADOR
 @id_jugador int, @id_persona int, @nro_camiseta smallint, @id_posicion int, @id_equipo int
 AS
-	INSERT INTO Jugadores VALUES(@id_jugador, @id_persona, @nro_camiseta, @id_posicion, @id_equipo)
+	INSERT INTO Jugadores VALUES(@id_jugador, @id_persona, @nro_camiseta, @id_posicion, @id_equipo, 1)
 GO
 CREATE PROC SP_INSERTAR_USUARIO
 @id_usuario int, @usuario varchar(25), @contrasena varchar(25), @rol varchar(15), @equipo_favorito int

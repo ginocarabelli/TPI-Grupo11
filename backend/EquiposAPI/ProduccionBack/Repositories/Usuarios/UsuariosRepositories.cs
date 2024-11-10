@@ -13,17 +13,22 @@ namespace ProduccionBack.Repositories.Usuarios
 
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            Models.Usuarios? u = _context.Usuarios.Find(id);
+            if (u != null)
+            {
+                _context.Usuarios.Remove(u);
+            }
+            return _context.SaveChanges() < 0;
         }
 
         public List<Models.Usuarios> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Usuarios.ToList();
         }
 
         public Models.Usuarios GetById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Usuarios.Find(id);
         }
 
         public Models.Usuarios LogInUser(string username, string password)
@@ -38,7 +43,12 @@ namespace ProduccionBack.Repositories.Usuarios
 
         public bool Update(int id, Models.Usuarios usuario)
         {
-            throw new NotImplementedException();
+            Models.Usuarios u = _context.Usuarios.Find(id);
+            if (u == null)
+            {
+                u = usuario;
+            }
+            return _context.SaveChanges() > 0;
         }
     }
 }

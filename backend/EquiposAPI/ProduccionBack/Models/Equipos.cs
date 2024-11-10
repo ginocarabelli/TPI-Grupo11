@@ -15,6 +15,8 @@ public partial class Equipos
 
     public int IdLiga { get; set; }
 
+    public bool Alta { get; set; }
+
     public virtual Personas DirectorTecnicoNavigation { get; set; }
 
     public virtual ICollection<EquiposLigasInfo> EquiposLigasInfos { get; set; } = new List<EquiposLigasInfo>();

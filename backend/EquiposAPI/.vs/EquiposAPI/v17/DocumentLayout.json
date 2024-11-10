@@ -7,24 +7,48 @@
       "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\personas\\personasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\personas\\personasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\jugadores\\jugadoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\jugadores\\jugadoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\usuarios\\usuariosrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\usuarios\\usuariosrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\posiciones\\posicionesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\posiciones\\posicionesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\personas\\ipersonasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\personas\\ipersonasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\equipos\\equiposrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\equipos\\equiposrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\jwt\\jwtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\jwt\\jwtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\models\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\models\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\jwt\\jwtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\jwt\\jwtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\repositories\\equipos\\iequiposrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\repositories\\equipos\\iequiposrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|c:\\users\\user\\desktop\\trabajos tup\\tpi-grupo11\\backend\\equiposapi\\produccionback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED316D43-2819-4362-82CF-2E73F773FD2A}|ProduccionBack\\ProduccionBack.csproj|solutionrelative:produccionback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,59 +66,108 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Program.cs",
-              "RelativeDocumentMoniker": "ProduccionBack\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Program.cs",
-              "RelativeToolTip": "ProduccionBack\\Program.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADkAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T20:40:56.555Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\appsettings.json",
+              "RelativeDocumentMoniker": "ProduccionBack\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\appsettings.json",
+              "RelativeToolTip": "ProduccionBack\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-10T20:19:43.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PosicionesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Posiciones\\PosicionesRepository.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Posiciones\\PosicionesRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Posiciones\\PosicionesRepository.cs",
+              "RelativeToolTip": "ProduccionBack\\Repositories\\Posiciones\\PosicionesRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T18:28:20.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Personas\\PersonasRepository.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Personas\\PersonasRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Personas\\PersonasRepository.cs",
+              "RelativeToolTip": "ProduccionBack\\Repositories\\Personas\\PersonasRepository.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBAAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T18:24:42.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IPersonasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Personas\\IPersonasRepository.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Personas\\IPersonasRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Personas\\IPersonasRepository.cs",
+              "RelativeToolTip": "ProduccionBack\\Repositories\\Personas\\IPersonasRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T18:24:41.475Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "JugadoresRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Jugadores\\JugadoresRepository.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Jugadores\\JugadoresRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Jugadores\\JugadoresRepository.cs",
+              "RelativeToolTip": "ProduccionBack\\Repositories\\Jugadores\\JugadoresRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T18:18:04.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "EquiposRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Equipos\\EquiposRepository.cs",
               "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Equipos\\EquiposRepository.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Equipos\\EquiposRepository.cs",
               "RelativeToolTip": "ProduccionBack\\Repositories\\Equipos\\EquiposRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T20:34:14.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T20:34:14.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "UsuariosRepositories.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Usuarios\\UsuariosRepositories.cs",
               "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Usuarios\\UsuariosRepositories.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Usuarios\\UsuariosRepositories.cs",
               "RelativeToolTip": "ProduccionBack\\Repositories\\Usuarios\\UsuariosRepositories.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA8AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T16:46:13.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Jwt.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Models\\Jwt.cs",
-              "RelativeDocumentMoniker": "ProduccionBack\\Models\\Jwt.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Models\\Jwt.cs",
-              "RelativeToolTip": "ProduccionBack\\Models\\Jwt.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "ProduccionBack\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowEkAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T17:14:30.246Z",
+              "WhenOpened": "2024-11-08T16:31:20.437Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "JwtRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Jwt\\JwtRepository.cs",
               "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Jwt\\JwtRepository.cs",
@@ -106,16 +179,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "ProduccionBack\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "ProduccionBack\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAADwvyUAAAAfAAAA",
+              "DocumentIndex": 10,
+              "Title": "IEquiposRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Equipos\\IEquiposRepository.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Repositories\\Equipos\\IEquiposRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Repositories\\Equipos\\IEquiposRepository.cs",
+              "RelativeToolTip": "ProduccionBack\\Repositories\\Equipos\\IEquiposRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T16:31:20.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T15:54:16.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Program.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Program.cs",
+              "RelativeToolTip": "ProduccionBack\\Program.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAIBJwDkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T20:40:56.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Jwt.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Models\\Jwt.cs",
+              "RelativeDocumentMoniker": "ProduccionBack\\Models\\Jwt.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trabajos TUP\\TPI-Grupo11\\backend\\EquiposAPI\\ProduccionBack\\Models\\Jwt.cs",
+              "RelativeToolTip": "ProduccionBack\\Models\\Jwt.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T17:14:30.246Z"
             }
           ]
         }
