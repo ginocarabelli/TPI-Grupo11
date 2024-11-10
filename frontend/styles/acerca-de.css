@@ -1,0 +1,60 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 70px;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    text-decoration: none;
+}
+
+.logo-utn {
+    width: 100px;
+    height: auto;
+}
+
+.integrante-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.foto-integrante {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #343a40;
+}
+
+.navbar .navbar-nav {
+    margin-left: 10px;
+}
+
+/* Ajuste del contenedor principal */
+.container {
+    flex: 1;
+}
+
+/* Footer fijo en la parte inferior */
+.footer-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa; /* Ajusta el color si lo deseas */
+}
