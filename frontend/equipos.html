@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI Programación II</title>
+    <link rel="stylesheet" href="/styles/general-styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/equipos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand text-light">ABMC Equipos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="ulNavbar">
+                    <li class="nav-item">
+                        <a href="jugadores.html" class="nav-link active text-light" aria-current="page">
+                            <button class="btn btn-dark">Jugadores</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link active text-light" aria-current="page">
+                            <button class="btn btn-dark">Volver</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page">
+                            <button class="btn btn-dark" id="login"></button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid">
+        <div class="welcome-dashboard container-lg" id="welcomeDashboard">
+            <div class="text-welcome">
+                <h1 id="personalized-message">Bienvenido al Tablero de Equipos</h1>
+                <p>¡Aquí encontrarás todos los equipos y funciones habilitadas para tu usuario!</p>
+            </div>
+            
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-dark" id="ModalLabel">Crear Equipo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="modalBody">
+                                <form class="row g-3" id="createTeam" method="POST">
+                                    <div class="col-md-6">
+                                        <label for="teamName" class="form-label text-dark">Nombre del Equipo</label>
+                                        <input type="text" class="form-control" id="teamName" placeholder="Sacachispa" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="selectDt" class="form-label text-dark">Director Técnico</label>
+                                        <select class="form-select text-dark" id="selectDt" required>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="selectLigue" class="form-label text-dark">Liga</label>
+                                        <select class="form-select" id="selectLigue" required>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-7 form-check">
+                                        <label class="form-check-label text-dark" for="flexCheckDefault">
+                                        ¿Actualmente Participando?
+                                        </label>
+                                        <input type="checkbox" value="alta" id="flexCheckDefault">
+                                      </div>
+                                      <div class="modal-footer" id="modalFooter">
+                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnBefore">Cancelar</button>
+                                      <button type="submit" class="btn btn-primary">Guardar</button>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <section class="teams-slider">
+            <h2 class="text-light">Equipos</h2>
+            <ul class="teams-ul" id="ulTeams">
+            </ul>
+        </section>
+    </main>
+    <main class="container-fluid team-selected">
+        
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="/javascript/modal.js"></script>
+    <script src="/javascript/equipos.js"></script>
+    <script src="/javascript/isLogin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

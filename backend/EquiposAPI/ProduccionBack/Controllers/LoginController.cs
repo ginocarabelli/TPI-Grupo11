@@ -44,6 +44,7 @@ namespace ProduccionBack.Controllers
                     result = ""
                 };
             }
+
             var jwt = _configuration.GetSection("Jwt").Get<Jwt>();
 
             var claims = new[]
@@ -55,6 +56,8 @@ namespace ProduccionBack.Controllers
                 new Claim("usuario", usuario.Usuario.ToString()),
                 new Claim("rol", usuario.Rol.ToString())
             };
+
+            string refreshToken = Guid.NewGuid().ToString();
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key));
             var logIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

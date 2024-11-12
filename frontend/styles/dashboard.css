@@ -1,10 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-    background: rgb(218,218,218);
-    background: linear-gradient(90deg, rgba(218,218,218,1) 0%, rgba(255,255,255,1) 51%, rgba(226,226,226,1) 100%);
+    background: rgb(7,11,38);
+    background: radial-gradient(circle, rgba(7,11,38,1) 0%, rgba(34,42,94,1) 100%);
 }
-
 .navbar-brand{
     font-family: 'Montserrat', sans-serif;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+.welcome-dashboard{
+    align-items: center;
+    text-align: center;
+    margin-block: 50px;
+    color: white;
+}
+.table-title .LPF-logo{
+    width: 30vw;
+}
+.table-title{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.table-title .table h1{
+    text-align: center;
+}
+.table-title .table{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+table td img{
+    width:30px;
+    margin-right: 10px;
+}
+table thead th, table tr, table td{
+    padding: 15px 20px;
+    border: 2px solid rgb(7,11,38);
+    font-size: 20px;
+}
+thead th{
+    color: white;
+}
+table tbody tr:first-child td:first-child{
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+table tbody tr:last-child td:first-child{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+table tbody tr td:last-child{
+    text-align: center;
+}
+table{
+    margin-inline: auto;
+    border: 2px solid transparent;
+    background-color: rgb(7,11,38);
+}
+table thead th{
+    background-color: rgb(7,11,38);
 }

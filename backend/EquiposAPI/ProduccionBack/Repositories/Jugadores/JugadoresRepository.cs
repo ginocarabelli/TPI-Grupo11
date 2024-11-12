@@ -1,4 +1,8 @@
 ﻿
+using ProduccionBack.Models;
+using ProduccionBack.Utils;
+using System.Data;
+
 namespace ProduccionBack.Repositories.Jugadores
 {
     public class JugadoresRepository : IJugadoresRepository
@@ -7,6 +11,15 @@ namespace ProduccionBack.Repositories.Jugadores
 
         public JugadoresRepository(Models.EquipoContext context) {
             _context = context;
+        }
+
+        public class JugadoresTitulares
+        {
+            public int NroCamiseta { get; set; }
+            public string NombreCompleto { get; set; }
+            public string Posicion { get; set; }
+            public DateTime FechaNac { get; set; }
+            public string NombreEquipo { get; set; }
         }
 
         public bool Delete(int id)
@@ -22,6 +35,26 @@ namespace ProduccionBack.Repositories.Jugadores
         public List<Models.Jugadores> GetAll()
         {
             return _context.Jugadores.Where(j => j.Alta).ToList();
+        }
+
+        public List<JugadoresTitulares> GetStartingPlayers(int equipo)
+        {
+            List<JugadoresTitulares> lst = new List<JugadoresTitulares>();
+            var helper = DataHelper.GetInstance();
+            List<ParameterSQL> paramLst = new List<ParameterSQL>();
+            paramLst.Add(new ParameterSQL("@id_equipo", equipo));
+            DataTable t = helper.ExecuteSPQuery("sp_mostrar_titulares", paramLst);
+            foreach (DataRow fila in t.Rows)
+            {
+                JugadoresTitulares j = new JugadoresTitulares();
+                j.NroCamiseta = Convert.ToInt32(fila[0]);
+                j.NombreCompleto = fila[1].ToString();
+                j.Posicion = fila[2].ToString();
+                j.FechaNac = Convert.ToDateTime(fila[3]);
+                j.NombreEquipo = fila[4].ToString();
+                lst.Add(j);
+            }
+            return lst;
         }
 
         public Models.Jugadores GetById(int id)

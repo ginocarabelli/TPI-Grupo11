@@ -35,7 +35,7 @@ public partial class EquipoContext : DbContext
     {
         modelBuilder.Entity<Equipos>(entity =>
         {
-            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88ADD6BC5E7");
+            entity.HasKey(e => e.IdEquipo).HasName("PK__Equipos__EE01F88AEF5D6082");
 
             entity.Property(e => e.IdEquipo)
                 .ValueGeneratedNever()
@@ -46,18 +46,22 @@ public partial class EquipoContext : DbContext
             entity.Property(e => e.NombreEquipo)
                 .IsRequired()
                 .HasMaxLength(25)
-                .IsUnicode(false)
                 .HasColumnName("nombre_equipo");
 
             entity.HasOne(d => d.DirectorTecnicoNavigation).WithMany(p => p.Equipos)
                 .HasForeignKey(d => d.DirectorTecnico)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_director_tecnico");
+
+            entity.HasOne(d => d.IdLigaNavigation).WithMany(p => p.Equipos)
+                .HasForeignKey(d => d.IdLiga)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_id_liga_equipo");
         });
 
         modelBuilder.Entity<EquiposLigasInfo>(entity =>
         {
-            entity.HasKey(e => e.IdEquipoLigaInfo).HasName("PK__EquiposL__649DEDA249D19B31");
+            entity.HasKey(e => e.IdEquipoLigaInfo).HasName("PK__EquiposL__649DEDA284B1CC57");
 
             entity.ToTable("EquiposLigasInfo");
 
@@ -78,7 +82,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Jugadores>(entity =>
         {
-            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E2EA7E9168");
+            entity.HasKey(e => e.IdJugador).HasName("PK__Jugadore__75BB83E22D46BA29");
 
             entity.ToTable(tb => tb.HasTrigger("TG_LOG_JUGADOR"));
 
@@ -109,7 +113,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<JugadoresLog>(entity =>
         {
-            entity.HasKey(e => e.IdJugadorLog).HasName("PK__Jugadore__C6528B9BCE1A2F60");
+            entity.HasKey(e => e.IdJugadorLog).HasName("PK__Jugadore__C6528B9B683D6895");
 
             entity.ToTable("JugadoresLog");
 
@@ -138,7 +142,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Ligas>(entity =>
         {
-            entity.HasKey(e => e.IdLiga).HasName("PK__Ligas__99842D79C8B87889");
+            entity.HasKey(e => e.IdLiga).HasName("PK__Ligas__99842D793D18CA2F");
 
             entity.Property(e => e.IdLiga)
                 .ValueGeneratedNever()
@@ -152,7 +156,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Partidos>(entity =>
         {
-            entity.HasKey(e => e.IdPartido).HasName("PK__Partidos__42D83E446C02172F");
+            entity.HasKey(e => e.IdPartido).HasName("PK__Partidos__42D83E4491DC61E4");
 
             entity.Property(e => e.IdPartido).HasColumnName("id_partido");
             entity.Property(e => e.Arbitro).HasColumnName("arbitro");
@@ -181,7 +185,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Personas>(entity =>
         {
-            entity.HasKey(e => e.IdPersona).HasName("PK__Personas__228148B0476D7428");
+            entity.HasKey(e => e.IdPersona).HasName("PK__Personas__228148B05AE0F144");
 
             entity.Property(e => e.IdPersona)
                 .ValueGeneratedNever()
@@ -192,13 +196,12 @@ public partial class EquipoContext : DbContext
             entity.Property(e => e.NombreCompleto)
                 .IsRequired()
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("nombre_completo");
         });
 
         modelBuilder.Entity<Posiciones>(entity =>
         {
-            entity.HasKey(e => e.IdPosicion).HasName("PK__Posicion__2234F8103C67333B");
+            entity.HasKey(e => e.IdPosicion).HasName("PK__Posicion__2234F810BCE30D7D");
 
             entity.Property(e => e.IdPosicion).HasColumnName("id_posicion");
             entity.Property(e => e.Posicion)
@@ -210,7 +213,7 @@ public partial class EquipoContext : DbContext
 
         modelBuilder.Entity<Usuarios>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuarios__4E3E04AD8581D9A5");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuarios__4E3E04AD4D814720");
 
             entity.Property(e => e.IdUsuario)
                 .ValueGeneratedNever()
@@ -218,7 +221,6 @@ public partial class EquipoContext : DbContext
             entity.Property(e => e.Contrasena)
                 .IsRequired()
                 .HasMaxLength(25)
-                .IsUnicode(false)
                 .HasColumnName("contrasena");
             entity.Property(e => e.IdEquipo).HasColumnName("id_equipo");
             entity.Property(e => e.Rol)
@@ -229,7 +231,6 @@ public partial class EquipoContext : DbContext
             entity.Property(e => e.Usuario)
                 .IsRequired()
                 .HasMaxLength(25)
-                .IsUnicode(false)
                 .HasColumnName("usuario");
 
             entity.HasOne(d => d.IdEquipoNavigation).WithMany(p => p.Usuarios)

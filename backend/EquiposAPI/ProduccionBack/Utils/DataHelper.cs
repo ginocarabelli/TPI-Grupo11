@@ -11,7 +11,7 @@ namespace ProduccionBack.Utils
 
         private DataHelper()
         {
-            _connection = new SqlConnection(@"Data Source=(localdb)\FacuGino;Initial Catalog=Equipos;Integrated Security=True");
+            _connection = new SqlConnection(@"Data Source=(localdb)\FacuGino;Initial Catalog=db_Equiposss;Integrated Security=True");
         }
 
         public static DataHelper GetInstance()

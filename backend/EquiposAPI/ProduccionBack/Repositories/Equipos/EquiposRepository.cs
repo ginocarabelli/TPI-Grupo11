@@ -23,7 +23,7 @@ namespace ProduccionBack.Repositories.Equipos
 
         public List<Models.Equipos> GetAll()
         {
-            return _context.Equipos.Where(e => e.Alta).ToList();
+            return _context.Equipos.Where(e => e.Alta).Include(e => e.IdLigaNavigation).Include(e => e.DirectorTecnicoNavigation).ToList();
         }
 
         public Models.Equipos GetById(int id)
@@ -33,6 +33,8 @@ namespace ProduccionBack.Repositories.Equipos
 
         public bool Save(Models.Equipos equipo)
         {
+            var lastTeam = _context.Equipos.ToList().LastOrDefault();
+            equipo.IdEquipo = lastTeam.IdEquipo+1;
             _context.Equipos.Add(equipo);
             return _context.SaveChanges() > 0;
         }

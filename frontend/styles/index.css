@@ -14,13 +14,13 @@ main{
     text-align: center;
 }
 .main-text h1{
-    font-size: 4rem;
+    font-size: 50px;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.425);
     font-weight: 800;
 }
 .main-text p{
     text-shadow: 1px 1px 5px rgb(0, 0, 0);
-    font-size: 1.7rem;
+    font-size: 30px;
 }
 .main-text a button{
     display: flex;

@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ProduccionBack.Models;
 
@@ -16,7 +17,7 @@ public partial class Personas
     public DateOnly FechaNac { get; set; }
 
     public bool Alta { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Equipos> Equipos { get; set; } = new List<Equipos>();
 
     public virtual ICollection<Jugadores> Jugadores { get; set; } = new List<Jugadores>();
