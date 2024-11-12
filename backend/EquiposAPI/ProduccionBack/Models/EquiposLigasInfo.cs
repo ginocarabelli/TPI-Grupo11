@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ProduccionBack.Models;
 
@@ -19,5 +20,6 @@ public partial class EquiposLigasInfo
 
     public bool Alta { get; set; }
 
+    [JsonIgnore]
     public virtual Equipos IdEquipoNavigation { get; set; }
 }

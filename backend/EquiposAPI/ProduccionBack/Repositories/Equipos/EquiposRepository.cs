@@ -23,7 +23,7 @@ namespace ProduccionBack.Repositories.Equipos
 
         public List<Models.Equipos> GetAll()
         {
-            return _context.Equipos.Where(e => e.Alta).Include(e => e.IdLigaNavigation).Include(e => e.DirectorTecnicoNavigation).ToList();
+            return _context.Equipos.Where(e => e.Alta).Include(e => e.IdLigaNavigation).Include(e => e.DirectorTecnicoNavigation).Include(e => e.EquiposLigasInfos).ToList();
         }
 
         public Models.Equipos GetById(int id)

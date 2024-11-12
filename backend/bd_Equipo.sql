@@ -1443,6 +1443,203 @@ VALUES
 (323, 323, 17, 3, 17, 1),   -- Iwobi (mediocampista)
 (324, 324, 11, 3, 17, 1);   -- Gray (mediocampista)
 
+-- Inserts for EquiposLigasInfo table 
+INSERT INTO EquiposLigasInfo (id_equipo, partidos_g, partidos_p, puntuacion, alta)
+VALUES
+  (1, 22, 8, 73.75, 1),
+  (2, 20, 10, 71.25, 1),
+  (3, 18, 12, 67.50, 1),
+  (4, 24, 6, 78.75, 1),
+  (5, 21, 9, 72.50, 1),
+  (6, 16, 14, 65.00, 1),
+  (7, 13, 17, 57.50, 1),
+  (8, 15, 15, 61.25, 1),
+  (9, 14, 16, 58.75, 1),
+  (10, 12, 18, 55.00, 1),
+  (11, 19, 11, 70.00, 1),
+  (12, 17, 13, 64.50, 1),
+  (13, 15, 15, 61.25, 1),
+  (14, 16, 14, 63.00, 1),
+  (15, 13, 17, 57.50, 1),
+  (16, 11, 19, 52.50, 1),
+  (17, 12, 18, 54.00, 1),
+  (18, 10, 20, 50.00, 1),
+  (19, 14, 16, 58.00, 1),
+  (20, 9, 21, 47.50, 1);
+
+
+-- Inserts for Partidos table
+INSERT INTO Partidos (id_local, id_visitante, fecha_partido, hora_partido, arbitro, resultado_local, resultado_visitante)
+VALUES
+  (1, 2, '2023-08-12', '15:00', 201, 2, 1),
+  (1, 3, '2023-08-19', '17:30', 202, 1, 2),
+  (2, 4, '2023-08-13', '15:00', 203, 0, 3),
+  (2, 5, '2023-08-26', '13:00', 204, 1, 1),
+  (3, 1, '2023-09-02', '15:00', 205, 2, 1),
+  (3, 6, '2023-09-16', '17:30', 206, 1, 1),
+  (4, 2, '2023-09-03', '15:00', 207, 2, 0),
+  (4, 7, '2023-09-23', '13:00', 208, 3, 1),
+  (5, 4, '2023-08-20', '15:00', 209, 1, 2),
+  (5, 8, '2023-09-17', '17:30', 210, 2, 1),
+  (6, 9, '2023-08-12', '13:00', 211, 2, 0),
+  (6, 10, '2023-08-19', '15:00', 212, 1, 1),
+  (7, 11, '2023-08-13', '17:30', 213, 1, 2),
+  (7, 12, '2023-08-26', '15:00', 214, 0, 1),
+  (8, 13, '2023-09-02', '13:00', 215, 2, 0),
+  (8, 14, '2023-09-16', '15:00', 216, 1, 1),
+  (9, 15, '2023-09-03', '17:30', 217, 2, 1),
+  (9, 16, '2023-09-23', '15:00', 218, 1, 0),
+  (10, 17, '2023-08-20', '13:00', 219, 0, 2),
+  (10, 18, '2023-09-17', '15:00', 220, 1, 1),
+  (11, 19, '2023-08-12', '15:00', 221, 2, 1),
+  (11, 20, '2023-08-19', '17:30', 222, 1, 0),
+  (12, 1, '2023-08-13', '15:00', 223, 1, 2),
+  (12, 3, '2023-08-26', '13:00', 224, 0, 1),
+  (13, 4, '2023-09-02', '15:00', 225, 1, 1),
+  (13, 5, '2023-09-16', '17:30', 226, 2, 0),
+  (14, 6, '2023-09-03', '15:00', 227, 1, 2),
+  (14, 7, '2023-09-23', '13:00', 228, 0, 1),
+  (15, 8, '2023-08-20', '15:00', 229, 2, 1),
+  (15, 9, '2023-09-17', '17:30', 230, 1, 0),
+  (16, 10, '2023-08-12', '13:00', 231, 1, 1),
+  (16, 11, '2023-08-19', '15:00', 232, 2, 0),
+  (17, 12, '2023-08-13', '17:30', 233, 1, 1),
+  (17, 13, '2023-08-26', '15:00', 234, 0, 2),
+  (18, 14, '2023-09-02', '13:00', 235, 1, 0),
+  (18, 15, '2023-09-16', '15:00', 236, 2, 1),
+  (19, 16, '2023-09-03', '17:30', 237, 1, 1),
+  (19, 17, '2023-09-23', '15:00', 238, 2, 0),
+  (20, 18, '2023-08-20', '13:00', 239, 1, 2),
+  (20, 19, '2023-09-17', '15:00', 240, 0, 1);
+
+
+
+  --JugadoresLog Arsenal
+  set dateformat dmy
+  go
+insert into JugadoresLog(id_jugador, nro_camiseta, id_posicion, id_equipo, fecha_actualizacion)
+values (1000, 1,1,14,'20/08/2021'), --ramsdale
+(1001,22,1,19,'15/08/2023'), -- raya
+(1002,31,1,1,'01/07/2022'), --hein
+
+(1003,2,2,1,'15/07/2021'), --saliba
+(1004,4,3,8,'30/07/2021'), --white
+(1005,6,2,1,'01/09/2020'), --magalhaes
+(1006,15,2,1,'23/01/2023'), --kiwior
+(1007,35,4,2,'22/07/2022'), --zinchenko
+(1008,18,3,1,'31/08/2021'), --tomiyasu
+(1009,12,2,1,'14/07/2023'), --timber
+(1010,17,3,16,'30/06/2023'), --cedric
+
+(1011,5,5,1,'05/10/2020'),--partey
+(1012,20,6,9,'31/01/2023'), --jorginho
+(1013,8,7,1,'20/08/2021'), --odegaard
+(1014,10,7,1,'01/08/2020'), --smith rowe
+(1015,29,7,9,'01/07/2023'), --havertz
+(1016,21,7,1,'01/07/2022'), --vieira
+(1017,25,5,1,'03/08/2020'), --elneny
+(1018,41,5,10,'15/07/2023'), --rice
+
+(1019,7,8,1,'01/07/2019'),--saka
+(1020,11,9,1,'02/07/2019'),--martinelli
+(1021,19,9,8,'20/01/2022'),-- trossard
+(1022,24,8,1,'30/06/2022'), --nelson
+(1023,9,11,2,'04/07/2022'), --jesus
+(1024,14,11,1,'02/01/2020') --nketiah
+
+--JugadoresLog Man City
+insert into  JugadoresLog(id_jugador, nro_camiseta, id_posicion, id_equipo, fecha_actualizacion)
+values (1025, 31, 1, 2,'01/07/2017'),   -- Ederson
+(1026, 18, 1, 2,'01/07/2022'),   -- Ortega
+(1027, 33, 1, 2, '20/07/2021'),   -- Carson
+
+-- Defensas
+(1028, 3, 2, 2,'29/09/2020'),    -- Dias
+(1029, 5, 2, 17,'09/08/2016'),    -- Stones
+(1030, 6, 2, 15,'05/08/2020'),    -- Aké
+(1031, 2, 3, 4, '14/07/2017'),    -- Walker
+(1032, 24, 4, 2,'05/08/2023'),   -- Gvardiol
+(1033, 25, 2, 2,'01/09/2022'),   -- Akanji
+(1034, 21, 4, 2,'16/08/2022'),   -- Sergio Gómez
+(1035, 82, 3, 2,'01/07/2022');   -- Rico Lewis
+
+insert into  JugadoresLog(id_jugador, nro_camiseta, id_posicion, id_equipo, fecha_actualizacion)
+values (1036, 16, 5, 2, '04/07/2019'),   -- Rodri
+(1037, 17, 7, 2,'30/08/2015'),   -- De Bruyne
+(1038, 27, 6, 11,'01/09/2023'),   -- Matheus Nunes
+(1039, 20, 7, 2,'01/07/2017'),   -- Bernardo Silva
+(1040, 47, 7, 2,'01/07/2017'),   -- Foden
+(1041, 8, 6, 9, '01/07/2023'),    -- Kovacic
+
+-- Extremos y Delanteros
+(1042, 10, 9, 5,'05/08/2021'),   -- Grealish
+(1043, 11, 8, 2,'24/08/2023'),   -- Doku
+(1044, 52, 8, 2,'01/07/2023'),   -- Oscar Bobb
+(1045, 9, 11, 2,'01/07/2022'),   -- Haaland
+(1046, 19, 10, 2,'07/07/2022');  -- Julián Álvarez
+
+--JugadoresLog Liverpool
+insert into  JugadoresLog(id_jugador, nro_camiseta, id_posicion, id_equipo, fecha_actualizacion)
+values
+-- Porteros
+(1050, 1, 1, 3,'19/07/2018'),    -- Alisson
+(1051, 62, 1, 3,'01/07/2019'),   -- Kelleher
+(1052, 13, 1, 10,'05/08/2019'),   -- Adrián
+-- Defensas
+(1053, 4, 2, 3,'01/01/2018'),    -- Van Dijk
+(1054, 5, 2, 3,'01/07/2021'),    -- Konaté
+(1055, 2, 3, 3,'01/07/2015'),    -- Gomez
+(1056, 32, 2, 3,'01/07/2016'),   -- Matip
+(1057, 26, 4, 3,'21/07/2017'),   -- Robertson
+(1058, 66, 3, 3,'01/07/2016'),   -- Alexander-Arnold
+(1059, 21, 4, 3,'10/08/2020'),   -- Tsimikas
+(1060, 78, 2, 3,'01/07/2023'),   -- Quansah
+(1061, 84, 3, 3,'01/07/2023'),   -- Bradley
+-- Mediocampistas
+(1062, 10, 6, 8, '01/07/2023'),   -- Mac Allister
+(1063, 8, 7, 3,'02/07/2023'),    -- Szoboszlai
+(1064, 3, 5, 3,'18/08/2023'),    -- Endo
+(1065, 17, 6, 3,'01/07/2020'),   -- Curtis Jones
+(1066, 38, 6, 3,'01/09/2023'),   -- Gravenberch
+(1067, 19, 7, 3,'01/07/2021'),   -- Elliott
+(1068, 43, 5, 3,'01/07/2022'),   -- Bajcetic
+
+-- Extremos y Delanteros
+(1069, 11, 8, 3,'01/07/2017'),   -- Salah
+(1070, 7, 9, 3,'30/01/2022'),    -- Luis Díaz
+(1071, 20, 10, 11,'19/09/2020'),  -- Diogo Jota
+(1072, 9, 11, 3,'01/07/2022'),   -- Darwin Núñez
+(1073, 18, 11, 3,'01/01/2023'),  -- Cody Gakpo
+
+--JugadoresLog Tottenham
+(1075, 13, 1, 4,'01/07/2023'),   -- Vicario
+(1076, 20, 1, 4,'01/07/2022'),   -- Forster
+(1077, 40, 1, 4,'01/08/2021'),   -- Austin
+-- Defensas
+(1078, 17, 2, 4,'30/08/2022'),   -- Romero
+(1079, 37, 2, 4,'08/08/2023'),   -- Van de Ven
+(1080, 38, 4, 4,'30/06/2023'),   -- Udogie
+(1081, 23, 3, 4,'01/07/2023'),   -- Porro
+(1082, 33, 4, 4,'23/11/2014'),   -- Davies
+(1083, 15, 2, 4,'31/07/2014'),   -- Dier
+(1084, 12, 3, 4,'31/08/2021'),   -- Emerson Royal
+(1085, 6, 2, 4,'11/01/2024'),    -- Dragusin
+
+-- Mediocampistas
+(1086, 30, 6, 4,'31/01/2022'),   -- Bentancur
+(1087, 8, 5, 8,'01/07/2022'),    -- Bissouma
+(1088, 29, 6, 4,'30/06/2022'),   -- Sarr
+(1089, 4, 6, 4,'31/05/2021'),    -- Skipp
+(1090, 5, 5, 4,'11/08/2020'),    -- Højbjerg
+(1091, 10, 7, 4,'01/07/2023'),   -- Maddison
+(1092, 18, 7, 4,'30/06/2023'),   -- Lo Celso
+-- Extremos y Delanteros
+(1093, 21, 8, 4,'01/07/2023'),   -- Kulusevski
+(1094, 28, 8, 18,'01/09/2023'),   -- Johnson
+(1095, 27, 9, 4,'11/07/2023'),   -- Solomon
+(1096, 7, 10, 4,'28/08/2015'),   -- Son
+(1097, 9, 11, 17,'01/07/2022'),   -- Richarlison
+(1098, 16, 11, 4,'09/01/2024')  -- Werner
 
 INSERT INTO Usuarios VALUES(1, 'minimega', '1234', 'Propietario', 1)
 INSERT INTO Usuarios VALUES(2, 'normaluser', '1234', 'Hinchada', 2)
@@ -1451,10 +1648,28 @@ INSERT INTO Usuarios VALUES(3, 'superuser', '1234', 'Propietario', 1)
 ALTER PROC sp_mostrar_titulares
 @id_equipo int
 AS
-	select top 11 j.nro_camiseta, p.nombre_completo, pos.posicion, fecha_nac, e.nombre_equipo
-	from Jugadores j 
-	join Personas p on p.id_persona = j.id_persona 
-	join Equipos e on e.id_equipo = j.id_equipo
-	join Posiciones pos on pos.id_posicion = j.id_posicion
-	where e.id_equipo =1
-	order by j.nro_camiseta
+	SELECT 
+    jugadores_con_fila.nro_camiseta, 
+    jugadores_con_fila.nombre_completo, 
+    jugadores_con_fila.posicion, 
+    jugadores_con_fila.fecha_nac, 
+    jugadores_con_fila.nombre_equipo
+FROM (
+    SELECT 
+        j.nro_camiseta, 
+        p.nombre_completo, 
+        pos.posicion, 
+        p.fecha_nac, 
+        e.nombre_equipo,
+        ROW_NUMBER() OVER (PARTITION BY pos.posicion ORDER BY j.nro_camiseta) AS fila
+    FROM Jugadores j 
+    JOIN Personas p ON p.id_persona = j.id_persona 
+    JOIN Equipos e ON e.id_equipo = j.id_equipo
+    JOIN Posiciones pos ON pos.id_posicion = j.id_posicion
+    WHERE e.id_equipo = 2
+) AS jugadores_con_fila
+WHERE jugadores_con_fila.fila = 1
+ORDER BY jugadores_con_fila.nro_camiseta;
+
+select * from Posiciones
+

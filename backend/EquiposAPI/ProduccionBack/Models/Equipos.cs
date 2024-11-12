@@ -19,7 +19,6 @@ public partial class Equipos
     public bool Alta { get; set; }
 
     public virtual Personas DirectorTecnicoNavigation { get; set; }
-    [JsonIgnore]
     public virtual ICollection<EquiposLigasInfo> EquiposLigasInfos { get; set; } = new List<EquiposLigasInfo>();
 
     public virtual Ligas IdLigaNavigation { get; set; }
